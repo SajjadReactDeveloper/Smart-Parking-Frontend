@@ -1,0 +1,24 @@
+// .chatings {
+//     display: grid;
+//     place-items: center;
+//     height: 100vh;
+// }
+
+// .app-bodies {
+//     display: flex;
+//     background-color: #ededed;
+//     margin-top: -30px;
+//     height: 90vh;
+//     width: 100%;
+//     margin-left: 150px;
+// }
+
+.list {
+    display: flex;
+    width: 100%;
+
+    .listContainer {
+        flex: 6;
+        height: 100vh;
+    }
+}

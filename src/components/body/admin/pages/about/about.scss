@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background: #C33764;
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)),
+    url("../../../../../../public/y.jpg");
+    height: 520px;
+    width: 100vw;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bold;
+}
+
+.sajjad{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.how{
+    background-image: url('../../../../../../public/w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.stepsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.item1{
+    float: left;
+    width: 25%;
+    background-color: rgb(38, 38, 142);
+    color: #fff;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 3s;
+    justify-content: center;
+}
+
+.item2 {
+    float: left;
+    width: 25%;
+    background-color: rgb(38, 38, 142);
+    color: #fff;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 3s;
+    
+}
+
+.item3 {
+    float: left;
+    width: 25%;
+    background-color: rgb(38, 38, 142);
+    color: #fff;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 10s;
+}
+
+.lineHeight{
+    line-height: 2.5;
+}
+
+.item1:hover .rotate{
+    transform: rotateY(180deg);
+}
+
+.item2:hover .rotate {
+    transform: rotateY(180deg);
+}
+
+.item3:hover .rotate {
+    transform: rotateY(180deg);
+}
+
+.myTeamContainer{
+    width: 100%;
+    height: 500px;
+    background-color: #0c52a1;
+}
+
+.myTeam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card{
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;    
+    position: relative;
+    transition: .6s;
+    margin: 0 25px;
+}
+
+.profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+}
+
+.img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+}
+
+.profile-card:hover{
+    border-radius: 10px;
+    height: 260px;
+}
+
+.profile-card:hover img{
+    border-radius: 10px;
+}
+
+.profile-card:hover .img {
+    transform: translateY(-60px);
+
+}
+
+.caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.social-links .sicons:hover .sicons{
+    color: #0c52a1;
+    cursor: pointer;
+}
+
+.profile-card:hover .caption{
+    opacity: 1;
+}
+
+.caption .social-links .sicons{
+    color: #333;
+    margin-right: 8px;
+    font-size: 18px;
+    transition: .6s;
+}
+
+.caption p{
+    font-size: 16px;
+    color: #0c52a1;
+    margin: 2px 0 6px 0;
+
+}
+
+.caption h3{
+    font-size: 21px;
+
+}

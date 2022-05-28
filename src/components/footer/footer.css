@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logoDiv{
+    margin: 5px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.contactss h3{
+    color: #fff;
+}
+
+.footer{
+    background-color: rgb(39, 38, 38);
+    padding-top: 20px;
+}
+.Navigation{
+    margin: 5px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.Navigation ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.appleRow{
+    margin-left: 20px;
+}
+
+.Navigation ul li::before {
+    content: "\2022";
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.help ul{
+    list-style: none;
+}
+
+.apple{
+    background-color: #f4770b;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    color: #fff;
+}
+
+.play {
+    /* background-color: rgb(24, 24, 58); */
+    background-color: #f4770b;
+    font-size: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    color: #fff;
+}
+
+.help ul li::before {
+    content: "\2022";
+    color: green;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.contact{
+    margin: 5px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.help{
+    margin: 5px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.iconss{
+    cursor: pointer;
+}
+
+.aaa{
+    display: flex;
+    background-color: rgb(39, 38, 38);
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.facebook:hover {
+    color: #fff;
+    transform: rotate(360deg);
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.facebook:hover .iconss {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.instagram:hover {
+    color: #fff;
+    transform: rotate(360deg);
+    border: 5px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+.instagram:hover .iconss {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+.twitter:hover {
+    color: #fff;
+    transform: rotate(360deg);
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+.twitter:hover .iconss {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+.socials{
+    background-color: rgb(52, 51, 51);
+    color: #fff;
+}
+
+.apple:hover{
+    border: 2px dotted greenyellow;
+    background-color: black;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.play:hover {
+    border: 2px dotted greenyellow;
+    background-color: black;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+
+.linkedin:hover {
+    color: #fff;
+    transform: rotate(360deg);
+    border: 5px solid #0e76a8;
+    box-shadow: 0 0 15px #0e76a8;
+    transition: all 0.5s ease;
+}
+
+.linkedin:hover .iconss {
+    color: #0e76a8;
+    text-shadow: 0 0 15px #0e76a8;
+    transition: all 0.5s ease;
+}
+
+.pinterest:hover {
+    color: #fff;
+    transform: rotate(360deg);
+    border: 5px solid #c8232c;
+    box-shadow: 0 0 15px #c8232c;
+    transition: all 0.5s ease;
+}
+
+.pinterest:hover .iconss {
+    color: #c8232c;
+    text-shadow: 0 0 15px #c8232c;
+    transition: all 0.5s ease;
+}

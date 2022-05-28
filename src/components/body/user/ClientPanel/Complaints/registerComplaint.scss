@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+input {
+    width: 100%;
+}
+
+.header {
+    padding: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    padding: 18.5px;
+    margin: 0;
+}
+
+.mainForm {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    padding: 30px;
+    width: 50%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+label {
+    padding-bottom: 10px;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.complaintButton{
+    // float: right;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.complaintBtn:hover{
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.25)
+}

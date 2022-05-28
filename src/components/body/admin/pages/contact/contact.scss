@@ -1,0 +1,71 @@
+.mainDiv{
+    background: #095a55;
+    background: linear-gradient(90deg, rgba(75, 0, 130, 1) 0%, rgba(0, 255, 255, 1) 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact{
+    min-width: 900px;
+    min-height: 450px;
+    display: flex;
+    z-index: 1000;
+    position: relative;
+}
+
+.contact .contactInfo{
+    position: absolute;
+    width: 300px;
+    height: calc(100% - 80px);
+    top: 40px;
+    background: #095a85;
+    padding: 40px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // justify-content: space-between;
+}
+
+.contact .contactForm{
+    position: absolute;
+    // height: 100%;
+    height: auto;
+    width: calc(100% - 150px);
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    background-color: #fff;
+    color: #000;
+}
+
+.fbicon{
+    transition: transform .6s;
+}
+
+.fbicon:hover{
+    transform: scale(1.5);
+    transform: rotate('360deg');
+}
+
+.socialsIcons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aaaa {
+    display: flex;
+    // background-color: rgb(39, 38, 38);
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    // color: gray;
+    color: #000;
+}

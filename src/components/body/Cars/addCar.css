@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+.AddCarbody{
+    font-family: 'Montserrat', 'sans-serif';
+    background: #f6f5f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin-top: 20px;
+}
+
+.registerCar{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.registerCarParagraph{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    margin-left: 40px;
+}
+
+.containers{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 530px;
+}
+
+.form{
+    margin-top: 30px;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.registerCarButton{
+    border-radius: 20px;
+    border: 1px solid #100a69;
+    background: #100a69;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.registerCarButton:active{
+    transform: scale(0.95);
+}
+
+.registerCarButton:focus{
+    outline: none;
+}
+
+.registerCarButton:hover{
+    background-color: #fff;
+    color: #100a69;
+}
+
+.RegisterCarImage{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    margin-left: 110px;
+    margin-top: 50px;
+}
+
+.form{
+    position: absolute;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
+}
+
+.overlay{
+    background-color: #100a69;
+    background: linear-gradient(to, right, #1308b4, #2d2383) no-repeat 0 0 / cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}

@@ -4,6 +4,7 @@ import './addCar.css';
 import axios from 'axios';
 import { showErrMsg, successMsg } from '../../utils/notifications/Notifications'
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 
 const initialState = {
   regNo: "",
@@ -29,6 +30,8 @@ const [values, setUser] = React.useState(initialState);
     const [loading, setLoading] = React.useState(false);
     const [callback, setCallBack] = React.useState(false);
 
+    const history = useHistory();
+
 
     const handleChangeInput = e => {
         const {name, value} = e.target;
@@ -40,10 +43,13 @@ const [values, setUser] = React.useState(initialState);
         e.preventDefault();
         try {
             const res = await axios.post('/car/addCar', {
-                regNo, brand, model, color, ownerName, ownerId: auth.user._id, ownerAvatar: auth.user.avatar, carImage: avatar
+                regNo, brand, model, color, ownerName: user.name, ownerId: auth.user._id, ownerAvatar: auth.user.avatar, carImage: avatar
             })
-            console.log(res.data.msg);
             setUser({...values, err: '', success: res.data.msg})
+            const time = setTimeout(() => {
+              history.push("/viewRequestedCar");
+            }, 3000)
+            return () => clearTimeout(time);
         } catch (error) {
             err.res.data.msg && setUser({...values, err: err.res.data.msg, success: ''})
         }
@@ -88,21 +94,28 @@ const [values, setUser] = React.useState(initialState);
       }
     };
   return (
-    <div className="AddCarbody">
-      <div className="containers">
-        <div className="form">
-          <div style={{ margin: 10 }}>
-            {err && showErrMsg(err)}
-            {success && successMsg(success)}
-          </div>
-          <h2 className="registerCar">Register Car</h2>
-          <form onSubmit={handleSubmit}>
-            <TextField
+    <div>
+      <div
+        style={{
+          width: 500,
+          padding: 20,
+          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+          margin: "auto",
+          marginTop: 20,
+          paddingLeft: 30,
+          paddingRight: 30,
+        }}
+      >
+        {err && showErrMsg(err)}
+        {success && successMsg(success)}
+        <h5 style={{ textAlign: "center", marginBottom: 10 }}>Register Car</h5>
+        <form onSubmit={handleSubmit}>
+          <TextField
               name="regNo"
               id="number"
               label="Car License"
               variant="standard"
-              style={{ marginBottom: 10 }}
+              style={{ marginBottom: 10, width: '100%' }}
               color="success"
               onChange={handleChangeInput}
             />
@@ -111,7 +124,7 @@ const [values, setUser] = React.useState(initialState);
               id="brand"
               label="Car Brand"
               variant="standard"
-              style={{ marginBottom: 10 }}
+              style={{ marginBottom: 10, width: '100%' }}
               color="success"
               onChange={handleChangeInput}
             />
@@ -120,7 +133,7 @@ const [values, setUser] = React.useState(initialState);
               id="model"
               label="Car Model"
               variant="standard"
-              style={{ marginBottom: 10 }}
+              style={{ marginBottom: 10, width: '100%' }}
               color="success"
               onChange={handleChangeInput}
             />
@@ -129,46 +142,30 @@ const [values, setUser] = React.useState(initialState);
               id="color"
               label="Car Color"
               variant="standard"
-              style={{ marginBottom: 10 }}
+              style={{ marginBottom: 10, width: '100%' }}
               color="success"
               onChange={handleChangeInput}
             />
-            <TextField
-            name="ownerName"
-              id="owner"
-              label="Owner Name"
-              variant="standard"
-              style={{ marginBottom: 10 }}
-              color="success"
-              onChange={handleChangeInput}
-            />
-            <label htmlFor="">Upload Car Image</label>
-            <input
-              className="form-control"
-              type="file"
-              name="file"
-              id="file_upload"
-              onChange={changeAvatar}
-            />
-            <div style={{ justifyContent: "center" }}>
-              <button className="registerCarButton" type="submit" disabled = {loading}>
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-        <div>
-          <div className="overlay">
-            <h2 className="registerCar">Smart Parking</h2>
-            <p className="registerCarParagraph">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
-              dolore?
-            </p>
-            <div className="RegisterCarImage">
-              <img src="cars.png" alt="" />
-            </div>
+          <label className="carLabel" htmlFor="">
+            Upload Car Image
+          </label>
+          <input
+            className="form-control"
+            type="file"
+            name="file"
+            id="file_upload"
+            onChange={changeAvatar}
+          />
+          <div style={{ justifyContent: "center" }}>
+            <button
+              className="registerCarButton"
+              type="submit"
+              disabled={loading}
+            >
+              Submit
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -13,11 +13,18 @@ import Button from '@mui/material/Button';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import CircularProgress from "@mui/material/CircularProgress";
+import Alert from "@mui/material/Alert";
 
 function ComplaintDetails() {
     const location = useLocation();
     const history = useHistory();
     const complaint = location.state;
+
+    const [showSuccessAlert, setShowSuccessAlert] = React.useState(true);
+    const [success, setSuccess] = React.useState();
+    const closeAlert = () => {
+      setShowSuccessAlert(false);
+    };
 
     const [response, setresponse] = React.useState()
     const [data, setData] = React.useState()
@@ -25,8 +32,12 @@ function ComplaintDetails() {
     const deleteComplaint = async (id) => {
       try {
         const res = await axios.delete(`/complaint/deleteComplaint/${id}`);
-        alert(res.data.msg);
-        history.push("/myComplaint");
+        setSuccess(res.data.msg);
+        const time = setTimeout(() => {
+          history.push("/myComplaint");
+        }, 2000);
+        return () => clearTimeout(time);
+        
       } catch (error) {}
     };
 
@@ -42,28 +53,23 @@ function ComplaintDetails() {
       {data ? (
         <div className="main">
           <body>
-            <div className="row">
+            <div className="row p-0">
               <div className="col-10">
                 <Card sx={{ maxWidth: 500 }} className="container mt-5">
+                  {success && showSuccessAlert && (
+                    <Alert style={{ width: "50%" }} onClose={closeAlert}>
+                      {success}
+                    </Alert>
+                  )}
                   <CardHeader
                     avatar={
                       <Avatar sx={{ bgcolor: red[500] }} src={data.avatar} />
-                    }
-                    action={
-                      <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                      </IconButton>
                     }
                     title={data.name}
                     subheader="Car Owner"
                   />
                   <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                      <b>Category </b>
-                      <b>{complaint.category}</b>
-                      <br />
-                      <b>Sub Category {complaint.subCategory}</b>
-                      <br />
                       <b>Type {complaint.type}</b>
                       <br />
                       <b>Title {complaint.title}</b>

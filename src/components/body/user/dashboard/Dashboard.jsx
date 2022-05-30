@@ -6,9 +6,9 @@ import './dashboard.scss'
  
 function Dashboard() {
   return (
-    <div className='list' style = {{maxHeight: '100vh'}}>
+    <div className="list" style={{ maxHeight: "100vh" }}>
       <Sidebar />
-      <div className="listContainer">
+      <div className="listContainer" style={{ backgroundColor: "#022140" }}>
         <Navbar />
         <UserDashboard />
       </div>

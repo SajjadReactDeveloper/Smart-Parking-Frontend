@@ -48,7 +48,8 @@
 .item1{
     float: left;
     width: 25%;
-    background-color: rgb(38, 38, 142);
+    background-color: transparent;
+    border: 1px solid #0c52a1;
     color: #fff;
     margin-right: 20px;
     padding: 20px;
@@ -60,19 +61,20 @@
 .item2 {
     float: left;
     width: 25%;
-    background-color: rgb(38, 38, 142);
+    background-color: transparent;
+    border: 1px solid #0c52a1;
     color: #fff;
     margin-right: 20px;
     padding: 20px;
     text-align: center;
     transition: transform 3s;
-    
 }
 
 .item3 {
     float: left;
     width: 25%;
-    background-color: rgb(38, 38, 142);
+    background-color: transparent;
+    border: 1px solid #0c52a1;
     color: #fff;
     margin-right: 20px;
     padding: 20px;
@@ -82,18 +84,6 @@
 
 .lineHeight{
     line-height: 2.5;
-}
-
-.item1:hover .rotate{
-    transform: rotateY(180deg);
-}
-
-.item2:hover .rotate {
-    transform: rotateY(180deg);
-}
-
-.item3:hover .rotate {
-    transform: rotateY(180deg);
 }
 
 .myTeamContainer{

@@ -1,7 +1,7 @@
 import React from 'react';
 import './viewComplaints.scss';
 import axios from 'axios';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function ViewComplaints() 
 {
@@ -11,7 +11,7 @@ function ViewComplaints()
     React.useEffect(async() => {
         const res = await axios.get(`/complaint/viewComplaint`)
         setCars(res.data)
-    })
+    },[])
 
     const handleClick = (data) => {
         history.push({

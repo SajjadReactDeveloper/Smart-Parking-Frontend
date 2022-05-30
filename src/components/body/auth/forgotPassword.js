@@ -47,27 +47,13 @@ function ForgotPassword() {
         }
     }
     return (
-        // <div className='container'>
-        //     <h2 className='text-center m-3'>Forgot Password</h2>
-        //     <div>
-        //         {err && showErrMsg(err)}
-        //         {success && showSuccessMsg(success)}
-
-        //         <label className='mb-3' htmlFor='email'>Enter Email</label><br></br>
-        //         <input className='form-control' type="text" name="email" id="email" placeholder='Enter Email' value={email} onChange={handleChangeInput} /><br></br>
-
-        //         <div className='text-center'>
-        //         <button className='btn btn-success text-center' onClick={forgotPassword}>Verify Your Email</button>
-        //         </div>
-        //     </div>
-        // </div>
-
-        <div className="body">
+        <div className="bodyss">
             <div className="containers">
                 <div className="overlay-container">
                     <div className="overlay">
                         <div className="overlay-panel overlay-right">
-                            
+                            <h3>Forgot Password?</h3>
+                            <p>Don't worry it happens. We'll email you instructions to reset your password.</p>
                         </div>
                     </div>
                 </div>

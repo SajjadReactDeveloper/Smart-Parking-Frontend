@@ -222,27 +222,25 @@ export default function Login() {
             <span>or use your account</span>
             <input type="text" placeholder='Email' name='email' onChange={handleChangeInput}/>
             <input type={passwordVisible ? "password": "password"} placeholder='Password' name='password' onChange={handleChangeInput}/>
-            <Link to="/forgotPassword">Forgot Password?</Link>
+            <Link to="/forgotPassword" className="border-bottom" style={{textDecoration: 'none', color: 'black'}}>Forgot Password?</Link>
             <button className="Loginbtn" type="submit">Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
           <div className="overlayss">
             <div className="overlay-panel overlay-left">
-              <h1>Welcome Back!</h1>
+              <h3>Welcome back!</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, deserunt.
+                To keep connected with us please login with your personal info
               </p>
               <button className="ghost" id="signIn" onClick={removeClass}>
                 Sign In
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Hello Friends</h1>
+              <h3>New Here?</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
-                quae.
+                Signup and discover a great amount of new opportunities.
               </p>
               <button className="ghost" id="signUp" onClick={addClass}>
                 Sign Up

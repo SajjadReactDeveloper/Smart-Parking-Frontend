@@ -29,7 +29,7 @@ function ViewCar() {
   return (
     <div className="datatable">
       <h3 className="text-center mb-3 mt-3">My Cars</h3>
-      <table className="table table-dark table-hover">
+      <table className="table" style={{ backgroundColor: "#022140",color: 'white' }}>
         <thead>
           <tr>
             <th scope="col">Registration Number</th>

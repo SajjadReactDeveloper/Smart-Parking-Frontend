@@ -4,11 +4,16 @@ import { useLocation, useHistory } from "react-router-dom";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
+import Alert from "@mui/material/Alert";
 
 export default function ViewRequestedCarsDetails() {
   const auth = useSelector((state) => state.authReducer);
-  const { user, isLogged } = auth;
-  console.log(user);
+
+  const [showSuccessAlert, setShowSuccessAlert] = React.useState(true);
+  const [success, setSuccess] = React.useState();
+  const closeAlert = () => {
+    setShowSuccessAlert(false);
+  };
 
   const location = useLocation();
   const car = location.state;
@@ -18,8 +23,11 @@ export default function ViewRequestedCarsDetails() {
     console.log(id);
     try {
       const res = await axios.delete(`/car/deleteCar/${id}`);
-      alert(res.data.msg);
-      history.push("/viewRequestedCar");
+      setSuccess(res.data.msg);
+      const time = setTimeout(() => {
+        history.push("/viewRequestedCar");
+      },2000)
+      return () => clearTimeout(time);
     } catch (error) {}
   };
   return (
@@ -32,6 +40,9 @@ export default function ViewRequestedCarsDetails() {
           alignItems: "center",
         }}
       >
+        {success && showSuccessAlert && (
+          <Alert style = {{width: '50%'}} onClose={closeAlert}>{success}</Alert>
+        )}
         <h3
           style={{
             display: "flex",
@@ -189,7 +200,7 @@ export default function ViewRequestedCarsDetails() {
             }}
             variant="outlined"
             color="error"
-            startIcon={<DeleteIcon style={{ color: "red", marginTop: 10 }} />}
+            startIcon={<DeleteIcon style={{ color: "red" }} />}
           >
             Delete
           </Button>

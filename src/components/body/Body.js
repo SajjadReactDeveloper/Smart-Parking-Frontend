@@ -43,6 +43,7 @@ import ComplaintDetail from '../body/user/Complaints/ComplaintDetail'
 import UserComplaintStatus from '../body/user/Complaints/UserComplaintStatus';
 import Chat from '../body/user/chat/Chatting';
 import Profiles from '../body/user/ClientPanel/profile/Profile';
+import EditProfile from '../body/admin/pages/profile/EditProfile'
 
 function Body() {
     const auth = useSelector(state => state.authReducer);
@@ -82,6 +83,7 @@ function Body() {
                 <Route path= "/complaintDetails" exact component={ComplaintDetail} />
                 <Route path= "/complaintStatus" exact component={UserComplaintStatus} />
                 <Route path= "/chat" exact component={Chat} />
+                <Route path= "/editProfile" exact component={EditProfile} />
 
             </Switch>
         </section>

@@ -47,32 +47,7 @@ function RegisterComlaint() {
     <div>
       <div className="main">
         <body>
-        <div className="row">
-                {/* <div className="col-12">
-                    <div className="NavbarMain">
-                        <h3 className="logo">Smart Parking</h3>
-                        <nav className="navbars">
-                            <ul className="nav-area">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
-                                <li><a href="">Services</a></li>
-                            </ul>
-                        </nav>
-                        <a href="" className="btn-area">Login</a>
-                    </div>
-                </div> */}
-            </div>
           <div className="row">
-            {/* <div className="col-2 sideBar">
-                <h3>Smart Parking</h3>
-                <ul>
-                    <a href=""><li><DashboardIcon className="icon"/><span>DashBoard</span></li></a>
-                    <Link to="/registerComplaint"><li><FeedIcon className="icon"/><span>Register Complaint</span></li></Link>
-                    <Link to="/complaintStatus"><li><StackedLineChartIcon className="icon"/><span>Track Complaints</span></li></Link>
-                    <Link to="/myComplaints"><li><PersonPinIcon className="icon"/><span>My Complaints</span></li></Link>
-                </ul>
-            </div> */}
             <div className="col-10">
               <header className="header">
                 <h2>Complaint Registration</h2>
@@ -84,34 +59,6 @@ function RegisterComlaint() {
                 </p>
               </div>
               <form action="" className="mainForm" onSubmit={handleSubmit}>
-                <label htmlFor="">
-                  Complaint Category <span style={{ color: "red" }}>*</span>
-                </label>
-                <select
-                  class="form-select form-select-md mb-3"
-                  aria-label=".form-select-lg example"
-                  name="category"
-                  onChange={handleChangeInput}
-                >
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label htmlFor="">
-                  Sub Category <span style={{ color: "red" }}>*</span>
-                </label>
-                <select
-                  class="form-select form-select-md mb-3"
-                  aria-label=".form-select-lg example"
-                  name="subCategory"
-                  onChange={handleChangeInput}
-                >
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
                 <label htmlFor="">
                   Complaint Type <span style={{ color: "red" }}>*</span>
                 </label>

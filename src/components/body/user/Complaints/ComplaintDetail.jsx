@@ -6,17 +6,6 @@ import "./addComplaint.scss";
 
 function ComplaintDetail() {
   return (
-    // <div>
-    //   <Navbar />
-    //   <div className="row">
-    //     <div className="col-2">
-    //       <Sidebar />
-    //     </div>
-    //     <div className="col-9">
-    //       <RegisterComplaint />
-    //     </div>
-    //   </div>
-    // </div>
     <div className="list">
       <Sidebar />
       <div className="listContainer">

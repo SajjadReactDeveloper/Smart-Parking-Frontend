@@ -5,10 +5,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { makeStyles } from '@mui/material';
 
 function ConfirmDialog(props) {
-    const {confirmDialog, setConfirmDialog} = props;
+    const {confirmDialog} = props;
   return (
     <Dialog open = {confirmDialog.isOpen} >
         <DialogTitle>

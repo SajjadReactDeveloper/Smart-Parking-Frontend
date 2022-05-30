@@ -1,8 +1,6 @@
 import React from "react";
-import "./navbar.scss";
 import EditLocationIcon from "@mui/icons-material/EditLocation";
 import LockIcon from "@mui/icons-material/Lock";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Avatar from "@mui/material/Avatar";
@@ -14,50 +12,6 @@ function Navbar() {
   const history = useHistory();
   return (
     <>
-      {/* <nav className="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-        <div className="container">
-          <a href="" className="navbar-brand">
-            Smart Parking
-          </a>
-          <button
-            type="button"
-            className="navbar-toggler"
-            data-bs-target="#navbarNav"
-            data-bs-toggle="collapse"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle-Navbar"
-          >
-            <span className="navbar-toggker-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <div className="mx-auto"></div>
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a href="" className="nav-link active">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="" className="nav-link text-white">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="" className="nav-link text-white">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="" className="nav-link text-white">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav> */}
-
       <div className="navbar-header">
         <div
           className="d-flex"
@@ -73,7 +27,7 @@ function Navbar() {
           <ul className="nav-area">
             <Link to="/home">
               <li>
-                <a href="">Home</a>
+                <a href="/#">Home</a>
               </li>
             </Link>
             <li>
@@ -81,12 +35,12 @@ function Navbar() {
             </li>
             <Link to="/about">
               <li>
-                <a href="">About</a>
+                <a href="/#">About</a>
               </li>
             </Link>
             <Link to="/contact">
               <li>
-                <a href="">Contact</a>
+                <a href="/#">Contact</a>
               </li>
             </Link>
           </ul>
@@ -98,7 +52,6 @@ function Navbar() {
               justifyContent: "center",
               alignItems: "center",
               marginLeft: "auto",
-              // border: '1px solid green',
               borderRadius: 5,
               padding: 10,
             }}
@@ -109,7 +62,7 @@ function Navbar() {
               src={user.avatar}
               style={{ marginRight: 10 }}
             />
-            <a>{user.name}</a>
+            <a style = {{textDecoration: 'none', color: 'black'}} href="/#">{user.name}</a>
           </div>
         ) : (
           <div
@@ -118,7 +71,6 @@ function Navbar() {
               justifyContent: "center",
               alignItems: "center",
               marginLeft: "auto",
-              // border: '1px solid green',
               borderRadius: 5,
               padding: 10,
             }}
@@ -129,10 +81,6 @@ function Navbar() {
             }}>
               Login
             </a>
-            {/* <WhatsAppIcon style={{ color: "green" }} />
-          <a href="" className="btn-areas">
-            0300-5271950
-          </a> */}
           </div>
         )}
       </div>

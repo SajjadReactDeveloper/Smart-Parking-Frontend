@@ -41,35 +41,16 @@ function MyComplaints() {
   };
   return (
     <div className="main">
-      <header className="header">
-        <h2>Customer Complaints</h2>
-      </header>
       <div className="viewComplaints">
         <div className="datatable">
-          <Input
-            id="input-with-icon-adornment"
-            placeholder="Complaint No"
-            style={{
-              backgroundColor: "lightgray",
-              padding: 3,
-              border: "none",
-              float: "right",
-              marginBottom: 10,
-              marginRight: 15,
-              marginTop: 10,
-            }}
-            endAdornment={
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            }
-          />
           <div className="tableContainer">
-            <table className="table table-dark table-hover">
+            <table
+              className="table"
+              style={{ backgroundColor: "#022140", color: "white" }}
+            >
               <thead>
                 <tr>
-                  <th scope="col">Category</th>
-                  <th scope="col">Sub Category</th>
+                  <th scope="col">Complaint No</th>
                   <th scope="col">Type</th>
                   <th scope="col">Title</th>
                   <th scope="col">Status</th>
@@ -78,8 +59,7 @@ function MyComplaints() {
               <tbody>
                 {cars.map((car) => (
                   <tr key={car._id}>
-                    <td onClick={() => handleClick(car)}>{car.category}</td>
-                    <td onClick={() => handleClick(car)}>{car.subCategory}</td>
+                    <td onClick={() => handleClick(car)}>{car._id}</td>
                     <td onClick={() => handleClick(car)}>{car.type}</td>
                     <td onClick={() => handleClick(car)}>{car.title}</td>
                     <td onClick={() => handleClick(car)}>{car.status}</td>

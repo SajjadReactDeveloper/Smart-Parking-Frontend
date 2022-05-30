@@ -55,9 +55,8 @@
 }
 
 .registerCarButton{
-    border-radius: 20px;
-    border: 1px solid #100a69;
-    background: #100a69;
+    border-radius: 10px;
+    background: orangered;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -66,10 +65,20 @@
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     transition: all 0.6s ease-in-out;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    border: none;
+    margin-top: 20px;
+}
+
+.carLabel {
+    padding-top: 5px;
+}
+
+.inputField {
+    padding: 5px;
 }
 
 .registerCarButton:active{
@@ -82,7 +91,8 @@
 
 .registerCarButton:hover{
     background-color: #fff;
-    color: #100a69;
+    color: orangered;
+    border: 1px solid orangered;
 }
 
 .RegisterCarImage{

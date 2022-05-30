@@ -48,59 +48,56 @@ function ComplaintStatus() {
   };
   return (
     <div className="main">
-      <header className="header">
-        <h2>Complaint Status</h2>
-      </header>
-      <div className="complaintStatus">
-        <h3>Please fill in the details below to proceed.</h3>
-        <p className="text-danger">
-          Note that all fields marked with an asterisk (*) are required.
-        </p>
-      </div>
-      <form action="" className="mainForm" onSubmit={handleSubmit}>
-        <label htmlFor="">
-          Complaint Number <span style={{ color: "red" }}>*</span>
-        </label>
-        <br />
-        <input
-          type="text"
-          name="id"
-          onChange={handleChangeInput}
-          placeholder="Complaint Number"
-          className="form-control"
-          style={{ marginBottom: 10 }}
-        />
-        <div className="complaintButton">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      <div className="row">
-        <div className="col-9">
-          <div className="" style={{ marginLeft: 20 }}>
-            {display ? (
-              <table className="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Category</th>
-                    <th scope="col">Sub Category</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr key={Id}>
-                    <td>{category}</td>
-                    <td>{subCategory}</td>
-                    <td>{type}</td>
-                    <td>{title}</td>
-                    <td>{status}</td>
-                  </tr>
-                </tbody>
-              </table>
-            ) : null}
+      <div
+        className=""
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: " center",
+          marginTop: 50,
+        }}
+      >
+        <form action="" className="mainForm" onSubmit={handleSubmit}>
+          <label htmlFor="">
+            Complaint Number{" "}
+            <span style={{ color: "red", marginLeft: 1 }}>*</span>
+          </label>
+          <br />
+          <input
+            type="text"
+            name="id"
+            onChange={handleChangeInput}
+            placeholder="Complaint Number"
+            className="form-control"
+            style={{ marginBottom: 10 }}
+          />
+          <div className="complaintButton">
+            <button
+              type="submit"
+              style={{ backgroundColor: "orangered", border: "none" }}
+            >
+              Submit
+            </button>
           </div>
-        </div>
+          {display ? (
+            <table className="table table-dark table-hover mt-3">
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr key={Id}>
+                  <td>{type}</td>
+                  <td>{title}</td>
+                  <td>{status}</td>
+                </tr>
+              </tbody>
+            </table>
+          ) : null}
+        </form>
       </div>
     </div>
   );

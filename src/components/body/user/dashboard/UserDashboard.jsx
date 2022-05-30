@@ -35,56 +35,61 @@ function UserDashboard() {
     //     </div>
     //   </div>
     // </div>
-    <>
-      <h1 className="smartParking text-center mt-5">
-        Welcome to Smart Parking
-      </h1>
+    <div>
+      <div className='p-3' style = {{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
+        <h6 style = {{color: 'white'}}>My Account Dashboard</h6>
+      </div>
       <div class="flip-box">
         <div class="flip-box-inner">
           <div class="flip-box-front">
-            <DirectionsCarIcon className="dashicon" />
-            {/* <img src="qw.png" alt="" width = "100px" height = "100px"/> */}
+            <DirectionsCarIcon
+              className="dashicon"
+              style={{ width: 70, height: 70 }}
+            />
           </div>
           <div class="flip-box-back">
             <div className="">
               <h4>Register Car</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi, modi?
+                Register your car, so that you can park your car in our parking.
               </p>
             </div>
           </div>
         </div>
         <div class="flip-box-inner1">
           <div class="flip-box-front">
-            <LocalParkingIcon className="dashicon" />
+            <LocalParkingIcon
+              className="dashicon"
+              style={{ width: 80, height: 80 }}
+            />
           </div>
           <div class="flip-box-back">
             <div className="">
               <h4>Book Parking</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi modi?
+                View available slots and book slot of your own choice.
               </p>
             </div>
           </div>
         </div>
         <div class="flip-box-inner2">
           <div class="flip-box-front">
-            <AssignmentIcon className="dashicon" />
+            <AssignmentIcon
+              className="dashicon"
+              style={{ width: 80, height: 80 }}
+            />
           </div>
           <div class="flip-box-back">
             <div className="">
               <h4>Register Complaint</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi,modi?
+                Register complaint if you have any problem.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
